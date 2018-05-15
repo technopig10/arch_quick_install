@@ -44,7 +44,7 @@ read nic
 arch-chroot /mnt systemctl enable dhcpcd@${nic}.service
 arch-chroot /mnt pacman -S sudo bash-completion --noconfirm
 arch-chroot /mnt mkinitcpio -p linux
-arch-chroot /mnt pacman -S grub os-prober --force --noconfirm
+arch-chroot /mnt pacman -S grub --force --noconfirm
 arch-chroot /mnt grub-install /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 printf "\n\n"
